@@ -16,7 +16,7 @@ class SynchroniseTranslationsCommand extends Command
      *
      * @var string
      */
-    protected $signature = 'translation:sync-translations {from?} {to?} {language?}';
+    protected $signature = 'translation-importer:sync-translations {from?} {to?} {language?}';
 
     /**
      * The console command description.

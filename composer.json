@@ -14,5 +14,16 @@
             "email": "anasctalal@gmail.com"
         }
     ],
-    "require": {}
+    "require": {
+        "php": "^8.2",
+        "illuminate/support": "^10.0"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Anastalal\\LaravelTranslationImporter\\Providers\\TranslationImporterServiceProvider",
+                "Anastalal\\LaravelTranslationImporter\\Providers\\TranslationImporterBindingsServiceProvider"
+            ]
+    }
+    }
 }
