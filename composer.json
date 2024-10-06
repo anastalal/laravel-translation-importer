@@ -1,0 +1,18 @@
+{
+    "name": "anastalal/laravel-translation-importer",
+    "description": "A Laravel Package to synchronise translation from your blade files",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Anastalal\\LaravelTranslationImporter\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Anas Talal",
+            "email": "anasctalal@gmail.com"
+        }
+    ],
+    "require": {}
+}
