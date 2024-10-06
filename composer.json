@@ -16,13 +16,13 @@
     ],
     "require": {
         "php": "^8.2",
-        "illuminate/support": "^10.0"
+        "illuminate/support": "^11.0"
     },
     "extra": {
         "laravel": {
             "providers": [
-                "Anastalal\\LaravelTranslationImporter\\Providers\\TranslationImporterServiceProvider",
-                "Anastalal\\LaravelTranslationImporter\\Providers\\TranslationImporterBindingsServiceProvider"
+                "Anastalal\\LaravelTranslationImporter\\TranslationImporterServiceProvider",
+                "Anastalal\\LaravelTranslationImporter\\TranslationImporterBindingsServiceProvider"
             ]
     }
     }

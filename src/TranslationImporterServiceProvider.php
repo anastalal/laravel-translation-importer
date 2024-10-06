@@ -6,7 +6,7 @@ use Illuminate\Support\ServiceProvider;
 use Anastalal\LaravelTranslationImporter\Console\Commands\ListMissingTranslationKeys;
 use Anastalal\LaravelTranslationImporter\Console\Commands\SynchroniseTranslationsCommand;
 use Anastalal\LaravelTranslationImporter\Console\Commands\SynchroniseMissingTranslationKeys;
-
+use Anastalal\LaravelTranslationImporter\Drivers\Translation;
 
 class TranslationImporterServiceProvider extends ServiceProvider{
 
@@ -40,7 +40,7 @@ class TranslationImporterServiceProvider extends ServiceProvider{
     private function publishConfiguration()
     {
         $this->publishes([
-            __DIR__.'/../config/translation.php' => config_path('translation.php'),
+            __DIR__.'/../config/translation-importer.php' => config_path('translation-importer.php'),
         ], 'config');
     }
 
@@ -51,7 +51,7 @@ class TranslationImporterServiceProvider extends ServiceProvider{
      */
     private function mergeConfiguration()
     {
-        $this->mergeConfigFrom(__DIR__.'/../config/translation.php', 'translation');
+        $this->mergeConfigFrom(__DIR__.'/../config/translation-importer.php', 'translation');
     }
 
 

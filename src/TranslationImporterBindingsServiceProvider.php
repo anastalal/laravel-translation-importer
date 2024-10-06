@@ -5,6 +5,7 @@ namespace Anastalal\LaravelTranslationImporter;
 use Illuminate\Translation\TranslationServiceProvider as ServiceProvider;
 use Illuminate\Translation\Translator;
 use Anastalal\LaravelTranslationImporter\Drivers\Translation;
+use Anastalaltalal\LaravelTranslationImporter\InterfaceDatabaseLoader;
 
 class TranslationImporterBindingsServiceProvider extends ServiceProvider
 {
