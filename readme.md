@@ -5,13 +5,13 @@
 
 ## Introduction
 
-The **Laravel Translation Importer** package is a simple and powerful solution to manage your application's translation keys efficiently. It scans your project for translation functions (`__()` and `trans()`) and automatically updates the translation files located in the `resources/lang` directory.
+The **Laravel Translation Importer** package is a simple and powerful solution to manage your Laravel application's translation keys efficiently. It scans your project for translation functions (`__()` and `trans()`) and automatically updates the translation files located in the `resources/lang` directory.
 
 This package simplifies the process of maintaining translations, especially when new keys are introduced during development. It helps you avoid missing translation keys by automating the synchronization between your project and language files.
 
 ## Features
 
-- **Automatic scanning**: The package scans your project for translation keys inside `__()` and `trans()` functions.
+- **Manual scanning**: The package provides commands to scan your project for translation keys inside `__()` and `trans()` functions. You can run these commands to update your translation files as needed.
 - **File generation**: It generates and updates translation files in `resources/lang`.
 - **CLI Commands**: Use artisan commands to sync missing keys or update existing ones.
 - **Supports Multiple Languages**: The package is compatible with multi-language projects and works seamlessly across different locales.
@@ -30,6 +30,20 @@ After installing, you need to publish the configuration file using:
 php artisan vendor:publish --provider="Anastalal\LaravelTranslationImporter\TranslationImporterServiceProvider"
 ```
 ## Usage
+
+> **Important Note**: Before using the package, you must manually create the necessary language folders and files in the `resources/lang` directory. For example:
+```bash
+resources/lang/
+ ├── en/
+ │ └── messages.php
+ ├── ar/ 
+ │ └── messages.php
+ ├── en.json
+ └── ar.json
+ ```
+You need to ensure that directories and files for the languages that you want are in place, as the package does not generate them automatically.
+
+
 
 ### Sync Missing Translation Keys
 The following command scans your project files for any missing translation keys and adds them to the respective language files in the resources/lang folder:

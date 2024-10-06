@@ -1,12 +1,31 @@
 {
     "name": "anastalal/laravel-translation-importer",
-    "description": "A Laravel Package to synchronise translation from your blade files",
+    "description": "A Laravel Package to synchronise translation keys. This package simplifies the process of maintaining translations, especially when new keys are introduced during development.",
     "type": "library",
+    "keywords": [
+        "laravel",
+        "translation",
+        "importer",
+        "synchronise-translations",
+        "synchronization-translations",
+        "laravel 11",
+        "laravel translation",
+        "package laravel"
+    ],
     "license": "MIT",
     "autoload": {
         "psr-4": {
             "Anastalal\\LaravelTranslationImporter\\": "src/"
         }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "JoeDixon\\Translation\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
     },
     "authors": [
         {
@@ -17,6 +36,10 @@
     "require": {
         "php": "^8.2",
         "illuminate/support": "^11.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^6.0|^8.0|^9.5",
+        "phpunit/phpunit": "^9.0|^10.0|^11.0"
     },
     "extra": {
         "laravel": {
